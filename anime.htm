@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: #346EAD;
+            color: white;
+            padding: 10px;
+            width: 96%;
+            margin: 10px auto ;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        h1{
+            font-size: 3.5rem;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+        .header-image{
+            border-radius: 10px;
+            width: 600px;
+            height: 400px;
+            margin: 40px 60px 40px 40px;
+            object-fit: cover;
+            border: 2px solid white;
+            box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+        }
+        .header-image-container{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .header-content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: 40px;
+            height: 100%;
+
+        }
+        .header-description{
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin-left: 30px;
+            color:#ecf0f1 ;
+            align-items: center;
+        } 
+    </style>
+    <link rel="stylesheet" href="animestyle.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>L'Univers des Animes</h1>
+            <p class="header-description"> Découvrez l'univers fascinant des animes japonais, des classiques intemporels aux dernières nouveautés.</p>
+        </div>
+        <div class="header-image-container">
+            <img src="https://i.pinimg.com/736x/ec/22/93/ec229392e4183b16c4819d83c77daab6.jpg" alt="image des top 100 anime" class="header-image">
+        </div>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#mangakas">Mangakas</a></li>
+            <li><a href="#genres">Genre</a></li>
+            <li><a href="#classement">Classement</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+    <main>
+        <section id="accueil">
+                <h2>Bienvenue dans l'univers des animes</h2>
+                <p>Les animes japonais représentent un phénomène culturel mondial. De <strong>Naruto</strong> à <strong>Attack on Titan</strong>, en passant par <strong>One Piece</strong> et <strong>Demon Slayer</strong>, ces œuvres captivent des millions de fans à travers le monde avec leurs histoires riches, leurs personnages complexes et leurs animations spectaculaires.</p>
+                <p>Cette page vous propose un voyage à travers cet univers fascinant, avec une présentation des genres, des auteurs célèbres, et mon classement personnel des meilleurs animes.</p>
+                
+                <div style="background-color: #f0f8ff; padding: 20px; border-radius: 10px; margin-top: 20px;">
+                    <h3 style="color: #2c3e50; margin-bottom: 10px;">Pourquoi les animes sont-ils si populaires ?</h3>
+                    <ul style="padding-left: 20px;">
+                        <li>Des histoires profondes et variées</li>
+                        <li>Des personnages développés et attachants</li>
+                        <li>Une animation artistique et créative</li>
+                        <li>Des thèmes universels qui touchent tout le monde</li>
+                    </ul>
+                </div>
+            </section>
+            <section id="genres">
+    <h2>Genres d'Animes Majeurs</h2>
+    <p>Découvrez les 4 genres les plus populaires de l'animation japonaise. Utilisez les flèches pour naviguer entre les œuvres.</p>
+    <div class="genre-section">
+        <div class="genre-header">
+            <h3>Shonen</h3>
+            <p class="genre-desc">Destiné aux adolescents, avec beaucoup d'action et d'aventures</p>
+        </div>
+        <div class="carousel">
+            <button class="carousel-btn prev" onclick="moveCarousel(-1, 'shonen')">‹</button>
+            <div class="carousel-container" id="shonen-carousel">
+                <div class="carousel-track" id="shonen-track">
+                    <div class="anime-card">
+                        <img src="https://images.saymedia-content.com/.image/t_share/MTc2NDY0MzY2MzUzNTI0Njk4/10-best-naruto-characters.jpg" alt="Naruto">
+                        <div class="anime-info">
+                            <h4>Naruto</h4>
+                            <p>Un ninja orphelin rêve de devenir Hokage</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BN2VlNTdlMzQtYzE5OC00YmYwLTgyZTItYjEzMWY0ZDNjMTJhXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Dragon Ball">
+                        <div class="anime-info">
+                            <h4>Dragon Ball Z</h4>
+                            <p>Combats épiques et Dragon Balls</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvtctxEKPODXyQW7LjXqqPsBhj7ORiYHsIfg&s" alt="One Piece">
+                        <div class="anime-info">
+                            <h4>One Piece</h4>
+                            <p>Chasse au trésor dans un monde de pirates</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://furansujapon.com/wp-content/uploads/2022/02/My-Hero-Academia-Visuel-3.jpg" alt="Hunter x Hunter">
+                        <div class="anime-info">
+                            <h4>My Hero Academia</h4>
+                            <p>École de super-héros</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpW1BMYeLZDXzmgU2w8nLcpHyjviW_jrNjuw&s" alt="Hunter x Hunter">
+                        <div class="anime-info">
+                            <h4>Hunter x Hunter</h4>
+                            <p>Recherche d'un père légendaire</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveCarousel(1, 'shonen')">›</button>
+        </div>
+    </div>
+    <div class="genre-section">
+        <div class="genre-header">
+            <h3>Action</h3>
+            <p class="genre-desc">Combats intenses et scènes dynamiques</p>
+        </div>
+        <div class="carousel">
+            <button class="carousel-btn prev" onclick="moveCarousel(-1, 'action')">‹</button>
+            <div class="carousel-container" id="action-carousel">
+                <div class="carousel-track" id="action-track">
+                    <div class="anime-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BZjliODY5MzQtMmViZC00MTZmLWFhMWMtMjMwM2I3OGY1MTRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Attack on Titan">
+                        <div class="anime-info">
+                            <h4>Attack on Titan</h4>
+                            <p>Survie contre des Titans géants</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWRaIUYW6W8mWGutUKJkRbKn2rOkYq9HN4Dg&s" alt="Demon Slayer">
+                        <div class="anime-info">
+                            <h4>Demon Slayer</h4>
+                            <p>Chasse aux démons pour sauver sa sœur</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXCB6CirqoKQKCLu5SvGcnU1_oqiq3LW8FHA&s" alt="Jujutsu Kaisen">
+                        <div class="anime-info">
+                            <h4>Jujutsu Kaisen</h4>
+                            <p>École d'exorcisme</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BOWQwOWY5NTUtMjAyZi00YjQzLTkwODgtNmQwZjU1MGIzZDhjXkEyXkFqcGc@._V1_.jpg" alt="Bleach">
+                        <div class="anime-info">
+                            <h4>Bleach</h4>
+                            <p>Adolescent devient Shinigami</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://m.media-amazon.com/images/M/MV5BNzMwOGQ5MWItNzE3My00ZDYyLTk4NzAtZWIyYWI0NTZhYzY0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg" alt="Bleach">
+                        <div class="anime-info">
+                            <h4>One Punch Man</h4>
+                            <p>Héros trop fort</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveCarousel(1, 'action')">›</button>
+        </div>
+    </div>
+    <div class="genre-section">
+        <div class="genre-header">
+            <h3>Isekai</h3>
+            <p class="genre-desc">Transport dans un monde parallèle</p>
+        </div>
+        <div class="carousel">
+            <button class="carousel-btn prev" onclick="moveCarousel(-1, 'isekai')">‹</button>
+            <div class="carousel-container" id="isekai-carousel">
+                <div class="carousel-track" id="isekai-track">
+                    <div class="anime-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSXaL4qavpAsFRK-Z6wp6J0yXmqEZ92cwhsg&s" alt="Sword Art Online">
+                        <div class="anime-info">
+                            <h4>Sword Art Online</h4>
+                            <p>Piégés dans un jeu vidéo</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://www.nautiljon.com/images/anime/00/61/mini/re_zero_kara_hajimeru_isekai_seikatsu_4616.webp?11715990964" alt="Re:Zero">
+                        <div class="anime-info">
+                            <h4>Re:Zero</h4>
+                            <p>Retour dans le temps à chaque mort</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlscSYTw3fr7trtJNBXoLtxtmWEXmtnCojhA&s" alt="Reincarnated as a Slime">
+                        <div class="anime-info">
+                            <h4>Reincarnated as a Slime</h4>
+                            <p>Réincarné en slime</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://miniwax.club/cdn/shop/files/FACINGHD-NGNLZERO-VINYLE.jpg?v=1682590570&width=1024" alt="No Game No Life">
+                        <div class="anime-info">
+                            <h4>No Game No Life</h4>
+                            <p>Monde où tout se décide par des jeux</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXiPc6D7q-ooqhWfF1P2ejqhR2pPAE5VEK6Q&s" alt="No Game No Life">
+                        <div class="anime-info">
+                            <h4>Mushoku Tensei</h4>
+                            <p>Monde où tout se décide par des jeux</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveCarousel(1, 'isekai')">›</button>
+        </div>
+    </div>
+    <div class="genre-section">
+        <div class="genre-header">
+            <h3>Drame Psychologique</h3>
+            <p class="genre-desc">Exploration de l'esprit humain</p>
+        </div>
+        <div class="carousel">
+            <button class="carousel-btn prev" onclick="moveCarousel(-1, 'drame')">‹</button>
+            <div class="carousel-container" id="drame-carousel">
+                <div class="carousel-track" id="drame-track">
+                    <div class="anime-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfw8MYtFdDMbCe6OW_yqI4SHatlGT0nhixzw&s" alt="Death Note">
+                        <div class="anime-info">
+                            <h4>Death Note</h4>
+                            <p>Carnet permettant de tuer</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNhgzXYSl2cE-b3wNDNKDZ8VMtkF33P1jl6g&s" alt="Monster">
+                        <div class="anime-info">
+                            <h4>Monster</h4>
+                            <p>Poursuite d'un tueur psychopathe</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://resizing.flixster.com/hRCJXanRf-V23wHxnvRmkJczQps=/fit-in/705x460/v2/https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/p451029_b_h9_aa.jpg" alt="Monster">
+                        <div class="anime-info">
+                            <h4>Neon Genesis Evangelion</h4>
+                            <p>Robots contre anges extraterrestres</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6ZbNq6bmaOl_Yqv-1fEm8h8rory8Ab1Bw5w&s" alt="Psycho-Pass">
+                        <div class="anime-info">
+                            <h4>Psycho-Pass</h4>
+                            <p>Système mesurant la propension au crime</p>
+                        </div>
+                    </div>
+                    <div class="anime-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSPrKL7Xcp4xeNuvoOiCY0iYRRcJ_GqjuijQ&s" alt="Paranoia Agent">
+                        <div class="anime-info">
+                            <h4>Paranoia Agent</h4>
+                            <p>Enquête sur un mystérieux agresseur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn next" onclick="moveCarousel(1, 'drame')">›</button>
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    // JavaScript simplifié pour le carrousel
+    document.addEventListener('DOMContentLoaded', function() {
+        initCarousels();
+    });
+    
+    function initCarousels() {
+        // Initialisation automatique de tous les carrousels
+        const genres = ['shonen', 'action', 'isekai', 'drame'];
+        genres.forEach(genre => {
+            window[`${genre}Position`] = 0;
+        });
+    }
+    
+    function moveCarousel(direction, genre) {
+        const track = document.getElementById(`${genre}-track`);
+        const cardWidth = 195; // 180px + 15px gap
+        const visibleCards = 4; // Nombre de cartes visibles
+        const totalCards = track.children.length;
+        
+        // Calculer la position maximale
+        const maxPosition = -(totalCards - visibleCards) * cardWidth;
+        
+        // Mettre à jour la position
+        window[`${genre}Position`] += direction * cardWidth * 2;
+        
+        // Limites
+        if (window[`${genre}Position`] > 0) window[`${genre}Position`] = 0;
+        if (window[`${genre}Position`] < maxPosition) window[`${genre}Position`] = maxPosition;
+        
+        // Appliquer la transformation
+        track.style.transform = `translateX(${window[`${genre}Position`]}px)`;
+    }
+</script>
+            <section id="classement">
+                <h1>Mon classement personnel</h1>
+                <p>Voici mon top 10 des meilleurs animes de tous les temps, avec des notes sur 5 étoiles :</p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Nom de l'anime</th>
+                            <th>Genre</th>
+                            <th>Année</th>
+                            <th>Note</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Attack on Titan</td>
+                            <td>Action / Drame</td>
+                            <td>2013</td>
+                            <td class="stars">★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Fullmetal Alchemist: Brotherhood</td>
+                            <td>2009</td>
+                            <td>Aventure / Fantastique</td>
+                            <td class="stars">★★★★★</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>One Piece</td>
+                            <td>Aventure / Action</td>
+                            <td>1999</td>
+                            <td class="stars">★★★★☆</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Death Note</td>
+                            <td>Thriller / Surnaturel</td>
+                            <td>2006</td>
+                            <td class="stars">★★★★☆</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Hunter x Hunter</td>
+                            <td>Action / Aventure</td>
+                            <td>2011</td>
+                            <td class="stars">★★★★☆</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Naruto: Shippuden</td>
+                            <td>Action / Aventure</td>
+                            <td>2007</td>
+                            <td class="stars">★★★★☆</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p style="margin-top: 20px; font-style: italic; color:#666 ;">
+                    Note : Ce classement est subjectif et basé sur mes préférences personnelles.
+                </p>
+            </section>
+    </main>
+    <aside id="mangakas">
+        <h2>Auteurs célèbres (Mangakas)</h2>
+        <ul class="mangaka-list">
+            <li><strong>Eiichiro Oda</strong> - Créateur de One Piece (1997-présent)</li>
+            <li><strong>Hayao Miyazaki</strong> - Co-fondateur du Studio Ghibli</li>
+            <li><strong>Hajime Isayama</strong>- Créateur d'Attack on Titan (2009-2021)</li>
+            <li><strong>Akira Toriyama</strong>- Créateur de Dragon Ball (1984-1995)</li>
+            <li><strong>Koyoharu Gotouge</strong>- Créateur de Demon Slayer (2016-2020)</li>
+            <li><strong>Naoko Takeuchi</strong> - Créatrice de Sailor Moon (1991-1997)</li>
+            <li><strong>Kōhei Horikoshi</strong> - Créateur de My Hero Academia (2014-présent)</li>
+            <li><strong>Gege Akutami</strong>- Créateur de Jujutsu Kaisen (2018-présent)</li>
+        </ul>
+    </aside>
+    </div>
+    <footer id="contact">
+        <p class="copyright">© Touria Errami - 2026 - Tous droits réservés</p>
+        <pre>
+            ___________ _______________________________    _____      _____  .___  
+\__    ___/ \_   _____/\______   \______   \  /  _  \    /     \ |   | 
+  |    |     |    __)_  |       _/|       _/ /  /_\  \  /  \ /  \|   | 
+  |    |     |        \ |    |   \|    |   \/    |    \/    Y    \   | 
+  |____| /\ /_______  / |____|_  /|____|_  /\____|__  /\____|__  /___| 
+         \/         \/         \/        \/         \/         \/      
+        </pre>
+        <p><b>email:</b>touriarami2005@gmail.com</p>
+    </footer>
+</body>
+</html>
